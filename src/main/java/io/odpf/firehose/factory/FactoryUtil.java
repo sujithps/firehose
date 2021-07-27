@@ -62,15 +62,15 @@ public class FactoryUtil {
         return consumerConfigurationMap;
     }
 
-    public static StencilConfig getStencilConfig(KafkaConsumerConfig kafkaConsumerConfig){
+    public static StencilConfig getStencilConfig(KafkaConsumerConfig kafkaConsumerConfig) {
         return StencilConfig.builder()
-                            .cacheAutoRefresh(kafkaConsumerConfig.getSchemaRegistryStencilCacheAutoRefresh())
-                            .cacheTtlMs(kafkaConsumerConfig.getSchemaRegistryStencilCacheTtlMs())
-                            .fetchAuthBearerToken(kafkaConsumerConfig.getSchemaRegistryStencilFetchAuthBearerToken())
-                            .fetchBackoffMinMs(kafkaConsumerConfig.getSchemaRegistryStencilFetchBackoffMinMs())
-                            .fetchRetries(kafkaConsumerConfig.getSchemaRegistryStencilFetchRetries())
-                            .fetchTimeoutMs(kafkaConsumerConfig.getSchemaRegistryStencilFetchTimeoutMs())
-                            .build();
+                .cacheAutoRefresh(kafkaConsumerConfig.getSchemaRegistryStencilCacheAutoRefresh())
+                .cacheTtlMs(kafkaConsumerConfig.getSchemaRegistryStencilCacheTtlMs())
+                .fetchAuthBearerToken(kafkaConsumerConfig.getSchemaRegistryStencilFetchAuthBearerToken())
+                .fetchBackoffMinMs(kafkaConsumerConfig.getSchemaRegistryStencilFetchBackoffMinMs())
+                .fetchRetries(kafkaConsumerConfig.getSchemaRegistryStencilFetchRetries())
+                .fetchTimeoutMs(kafkaConsumerConfig.getSchemaRegistryStencilFetchTimeoutMs())
+                .build();
 
     }
 }
